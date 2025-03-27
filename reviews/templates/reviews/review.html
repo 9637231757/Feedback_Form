@@ -7,12 +7,11 @@
 </head>
 <body>
     <form method ="POST" action="">
-         {% csrf_token %}
-         {% if has_error %}
-           <p>This form is invalid - please enter a valid username!</p>
-         {% endif %}
-        <label for="username">Your name</label>
-        <input type="text" id="username" name="username" required>
+      {% csrf_token %}
+       <div class="form-control {% if form.user_name.errors %} errors {% endif %}">
+        {{ form.user_name.label_tag }}
+        {{form.user_name}}
+        {{form.user_name.errors}}   
         <button type="submit">send</button>
     </form>
 </body>
