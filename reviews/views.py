@@ -8,7 +8,7 @@ from django.views.generic.edit import CreateView
 
 from .forms import ReviewForm
 from .models import Review
-# using class for the function
+# using class
 
 class ReviewView(CreateView):
     model = Review
