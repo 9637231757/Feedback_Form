@@ -9,7 +9,7 @@ from django.views.generic.edit import CreateView
 from .forms import ReviewForm
 from .models import Review
 # using class
-
+# update this by using class
 class ReviewView(CreateView):
     model = Review
     form_class = ReviewForm
@@ -29,8 +29,7 @@ class ReviewsListView(ListView):
     template_name = "reviews/review_list.html"
     model = Review
     context_object_name = "reviews"
-    
-      
+         
         
 class SingleReviewView(DetailView):
     template_name = "reviews/single_review.html" 
